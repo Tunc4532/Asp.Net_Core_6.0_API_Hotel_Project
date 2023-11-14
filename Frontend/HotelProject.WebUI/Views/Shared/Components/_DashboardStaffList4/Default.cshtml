@@ -1,0 +1,19 @@
+﻿@model List<HotelProject.WebUI.DTOs.StaffDto.Last4StafListDto>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-lg-3 col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <div class="text-center">
+                        <img src="@item.SocialMedia3" style="height:100px" class="rounded-circle" alt="">
+                        <h5 class="mt-3 mb-1">@item.Name</h5>
+                        <p class="m-0">@item.Title</p>
+                        <a href="javascript:void()" class="btn btn-sm btn-warning">Mesaj Gönder</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

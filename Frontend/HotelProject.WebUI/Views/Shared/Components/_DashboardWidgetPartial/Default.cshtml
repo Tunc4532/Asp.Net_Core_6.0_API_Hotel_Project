@@ -1,0 +1,50 @@
+﻿<div class="row">
+    <div class="col-lg-3 col-sm-6">
+        <div class="card gradient-1">
+            <div class="card-body">
+                <h3 class="card-title text-white">Personel Sayısı</h3>
+                <div class="d-inline-block">
+                    <h2 class="text-white">@ViewBag.StaffCount</h2>
+                    <p class="text-white mb-0">@DateTime.Now.ToString("MMM") - @DateTime.Now.Year</p>
+                </div>
+                <span class="float-right display-5 opacity-5"><i class="fa fa-shopping-cart"></i></span>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-sm-6">
+        <div class="card gradient-2">
+            <div class="card-body">
+                <h3 class="card-title text-white">Rezervasyon Sayısı</h3>
+                <div class="d-inline-block">
+                    <h2 class="text-white">@ViewBag.BookingCount</h2>
+                    <p class="text-white mb-0">@DateTime.Now.ToString("MMM") - @DateTime.Now.Year</p>
+                </div>
+                <span class="float-right display-5 opacity-5"><i class="fa fa-car"></i></span>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-sm-6">
+        <div class="card gradient-3">
+            <div class="card-body">
+                <h3 class="card-title text-white">Müşteri Sayısı</h3>
+                <div class="d-inline-block">
+                    <h2 class="text-white">@ViewBag.UserCount</h2>
+                    <p class="text-white mb-0">@DateTime.Now.ToString("MMM") - @DateTime.Now.Year</p>
+                </div>
+                <span class="float-right display-5 opacity-5"><i class="fa fa-heart"></i></span>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-sm-6">
+        <div class="card gradient-4">
+            <div class="card-body">
+                <h3 class="card-title text-white">Oda Sayısı </h3>
+                <div class="d-inline-block">
+                    <h2 class="text-white">@ViewBag.RommCount</h2>
+                    <p class="text-white mb-0">@DateTime.Now.ToString("MMM") - @DateTime.Now.Year</p>
+                </div>
+                <span class="float-right display-5 opacity-5"><i class="fa fa-heart"></i></span>
+            </div>
+        </div>
+    </div>
+</div>

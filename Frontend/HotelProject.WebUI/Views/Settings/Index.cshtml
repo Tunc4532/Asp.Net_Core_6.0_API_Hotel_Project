@@ -1,0 +1,28 @@
+﻿@model HotelProject.WebUI.Models.Setting.UserEditViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <label>Adınız</label>
+    <input type="text" asp-for="Name" class="form-control" />
+    <br />
+    <label>Soyadınız</label>
+    <input type="text" asp-for="SurName" class="form-control" />
+    <br />
+    <label>Kullanıcı Adınız</label>
+    <input type="text" asp-for="UserName" class="form-control" />
+    <br />
+    <label>Mail Adresiniz</label>
+    <input type="text" asp-for="Email" class="form-control" />
+    <br />
+    <label>Şifreniz</label>
+    <input type="password" asp-for="Password" class="form-control" />
+    <br />
+    <label>Tekrar Şifreniz</label>
+    <input type="password" asp-for="CnfirmPassword" class="form-control" />
+    <br />
+    <button class="btn btn-outline-secondary">Güncelle</button>
+</form>
+

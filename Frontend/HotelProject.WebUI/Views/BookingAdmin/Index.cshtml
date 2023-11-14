@@ -1,0 +1,64 @@
+﻿@model List<ResultBookingDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+<div class="col-lg-12">
+
+    <div class="card-body">
+        <div class="card-title">
+            <h4>Rezervasyonlar</h4>
+        </div>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Müşteri</th>
+                        <th>Giriş Tarihi</th>
+                        <th>Çıkış Tarihi</th>
+                        <th>Durum</th>
+                        <th>Onayla</th>
+                        <th>İptal Et</th>
+                        <th>Detaylar</th>
+                        <th>Beklet</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        count++;
+                        <tr>
+                            <td>@count</td>
+                            <td>@item.Name</td>
+                            <td>@(((DateTime)item.Checkin).ToString("dd-MMM-yyyy"))</td>
+                            <td>@(((DateTime)item.CheckOut).ToString("dd-MMM-yyyy"))</td>
+                            @if (item.Status2 == "Onaylandı")
+                            {
+                                <td><span class="badge badge-primary px-2">Onaylandı</span></td>
+                            }
+                            @if (item.Status2 == "Onay Bekliyor")
+                            {
+                                <td><span class="badge badge-info px-2">Onay Bekliyor</span></td>
+                            }
+                            @if (item.Status2 == "İptal Edildi")
+                            {
+                                <td><span class="badge badge-danger px-2">İptal Edildi</span></td>
+                            }
+                            @if (item.Status2 == "Müşteri Aranacak")
+                            {
+                                <td><span class="badge badge-warning px-2">Müşteri Aranacak</span></td>
+                            }
+                            <td><a href="/BookingAdmin/ApproverdRezervation2/@item.BookingID" class="btn btn-outline-success">Onayla</a></td>
+                            <td><a href="/BookingAdmin/ApproverdReservationCancel/@item.BookingID" class="btn btn-outline-danger">İptal Et</a></td>
+                            <td><a href="/BookingAdmin/ApproverdReservationStop/@item.BookingID" class="btn btn-outline-warning">Beklet</a></td>
+                            <td><a href="/BookingAdmin/UpdateBooking/@item.BookingID" class="btn btn-outline-info">Güncelle</a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

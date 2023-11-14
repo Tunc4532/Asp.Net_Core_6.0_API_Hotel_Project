@@ -1,0 +1,50 @@
+﻿@model UpdateBookingDto
+@{
+    ViewData["Title"] = "UpdateBooking";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <input type="hidden" asp-for="BookingID" />
+    <span class="col-form-label">Müşteri Adı Soyadı</span>
+    <input type="text" asp-for="Name" class="form-control" />
+    <br />
+    <span class="col-form-label">Müşteri Mail</span>
+    <input type="text" asp-for="Mail" class="form-control" />
+    <br />
+    <span class="col-form-label">Giriş Tarihi</span>
+    <input type="datetime" asp-for="Checkin" class="form-control" />
+    <br />
+    <span class="col-form-label">Çıkış Tarihi</span>
+    <input type="datetime" asp-for="CheckOut" class="form-control" />
+    <br />
+    <span class="col-form-label">Şehir</span>
+    <input type="text" asp-for="City" class="form-control" />
+    <br />
+    <span class="col-form-label">Yetişkin Sayısı</span>
+    <input type="text" asp-for="AdultCount" class="form-control" />
+    <br />
+    <span class="col-form-label">Çocuk Sayısı</span>
+    <input type="text" asp-for="ChiledCount" class="form-control" />
+    <br />
+    <span class="col-form-label">Oda Sayısı</span>
+    <input type="text" asp-for="RoomCount" class="form-control" />
+    <br />
+    <span class="col-form-label">Yetişkin Sayısı</span>
+    <input type="text" asp-for="City" class="form-control" />
+    <br />
+    <span class="col-form-label">Ülke</span>
+    <input type="text" asp-for="Country" class="form-control" />
+    <br />
+    <span class="col-form-label">Durum</span>
+    <input type="text" asp-for="Status2" class="form-control" />
+    <br />
+    <span class="col-form-label">Özel İstekler</span>
+    <textarea class="form-control" rows="5" asp-for="SpecialRequest"></textarea>
+    <br />
+    <span class="col-form-label">Açıklama</span>
+    <textarea class="form-control" rows="5" asp-for="Description"></textarea>
+    <br />
+    <button class="btn btn-outline-success">Rezervasyon Güncelle</button>
+</form>
+
